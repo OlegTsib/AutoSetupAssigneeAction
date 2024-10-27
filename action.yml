@@ -1,0 +1,12 @@
+name: "Auto setup Assignee"
+description: "Auto setup Assignee on opening PR"
+author: "Oleg Tsibulevski"
+
+inputs:
+  GITHUB_TOKEN:
+    description: "The GitHub token authentication."
+    required: true
+
+runs:
+  using: "node20"
+  main: "lib/main.js"
