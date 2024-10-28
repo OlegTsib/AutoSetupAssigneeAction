@@ -5,7 +5,7 @@ import { PullRequestEvent } from '@octokit/webhooks-types'
 import GitHubService from "./git_hub_service"
 
 export async function run() {
-    const token = getInput(getInput("GITHUB_TOKEN"))
+    const token = getInput("GITHUB_TOKEN")
     const gitHubClient = getOctokit(token)
     const gitHubService = new GitHubService(gitHubClient, context)
     const { pull_request: event } = context.payload as PullRequestEvent
